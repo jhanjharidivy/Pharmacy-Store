@@ -1,0 +1,38 @@
+create database medshop;
+
+use medshop;
+
+create table bill
+(
+billno int(3) primary key AUTO_INCREMENT,
+billdate date,
+gelusil int(2),
+combiflam int(2),
+amocixillin int(2),
+xanax int(2),
+allegra int(2),
+total int(3)
+);
+
+create table sales
+(
+itemno int(1),
+itemname varchar(15) primary key,
+stock int(3),
+cp int(3),
+sp int(3)
+);
+
+insert into sales values(1, 'Gelusil', 100, 10, 15);
+insert into sales values(2, 'Combiflam', 100, 20, 22);
+insert into sales values(3, 'Amocixillin', 100, 7, 10);
+insert into sales values(4, 'Xanax', 100, 17, 20);
+insert into sales values(5, 'Allegra', 100, 5, 9);
+
+create table profit
+(
+purchases int(7),
+sales int(7)
+);
+
+insert into profit values(5900, 0);
